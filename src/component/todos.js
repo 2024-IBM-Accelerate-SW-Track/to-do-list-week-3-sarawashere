@@ -13,7 +13,7 @@ const Todos = ({ todos, deleteTodo }) => {
   const todoList = todos.length ? (
     todos.map((todo) => {
       let color = "#ffffffff";
-      const dueDate=new DataTransfer(todo.due);
+      const dueDate=new Date(todo.due);
       const now=new Date();
       if(dueDate<now){
         color="red";
