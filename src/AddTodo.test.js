@@ -1,7 +1,7 @@
-import { render, screen} from '@testing-library/react';
+import { render, screen,fireEvent} from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import App from './App';
-import fireEvent from '@testing-library/react';
+import fireEvent from testing-library/react;
 import '@testing-library/jest-dom/extend-expect';
 
 let container = null;
