@@ -19,7 +19,7 @@ class AddTodo extends Component {
   handleChange = (event) => {
     this.setState({
       content: event.target.value,
-      date: Date().toLocaleString('en-US')
+      date: Date().toLocaleString('en-US'),
     });
   };
 
@@ -59,6 +59,7 @@ class AddTodo extends Component {
           variant="outlined"
           onChange={this.handleChange}
           value={this.state.content}
+          data-testid="new-item-button"
         />
         <LocalizationProvider dateAdapter={AdapterDateFns}>         
         <DesktopDatePicker
@@ -67,6 +68,7 @@ class AddTodo extends Component {
         value={this.state.due}
         onChange={this.handleDateChange}
         renderInput={(params) => <TextField {...params} />}
+        data-testid="new-item-button"
         />
         </LocalizationProvider>
         <Button
